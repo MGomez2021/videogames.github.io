@@ -1,0 +1,197 @@
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TALLER No. 2</title>
+
+
+<style>
+	
+#miCanvas{
+	border:outset 10px rgb(145, 255, 0);
+	background:green;	
+}
+</style>
+
+<script>
+
+//*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*CREADO Y DESARROLLADO POR MAURICIO GOMEZ*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*//
+window.onload = function(){
+
+	//CUADRO EN DEGRADEE
+	var canvas = document.getElementById("miCanvas");
+	if(canvas && canvas.getContext){
+		var ctx = canvas.getContext("2d");
+		if(ctx){
+			var gradiente = ctx.createLinearGradient(0,0,0,canvas.height);
+			gradiente.addColorStop(0, 'orangered');
+			gradiente.addColorStop(0.5, "gold");
+			gradiente.addColorStop(0.9, "khaki");
+			gradiente.addColorStop(1, "coral");
+			
+			ctx.fillStyle = gradiente;
+			ctx.fillRect(0,0,canvas.width,canvas.height);
+	//VENTANA EMERGENTE
+		if(canvas && canvas.getContext){
+			var ctx = canvas.getContext("2d");
+		/*if(ctx){
+			alert("Bienvenido a Creacion de Videojuegos");
+		} else {
+			alert("Error al crear el contexto");
+		}*/
+		
+	//AGREGAR IMAGEN
+	if(ctx){
+		var imagen = new Image();
+		function procesaImagen(){
+			ctx.drawImage(imagen,750,260,190,190);
+		}		
+		imagen.src = "./imagenes/img2.jpg";
+		imagen.onload = function(e){
+			procesaImagen();
+			}
+		}
+	
+	}
+			
+		} 	
+	if(ctx){
+			//LETRA M
+			ctx.lineWidth = 25;
+			ctx.strokeStyle = "black";
+			ctx.lineJoin = "round";
+			ctx.moveTo(50,220);
+			ctx.lineTo(60,40);
+			ctx.lineTo(110,130);
+			ctx.lineTo(150,40);
+			ctx.lineTo(170,220);
+			ctx.stroke();
+			
+	
+			//LETRA A
+			ctx.beginPath();
+			ctx.moveTo(200,220);
+			ctx.lineTo(230,50);
+			ctx.lineTo(280,220);
+			ctx.stroke();
+			ctx.moveTo(200,180);
+			ctx.lineTo(270,180);
+			ctx.stroke();
+
+			//LETRA U
+			ctx.beginPath();
+			ctx.moveTo(300,50);
+			ctx.bezierCurveTo(250,350, 450,180,380,50);
+			ctx.stroke();
+
+			//LETRA R
+			ctx.beginPath();
+			ctx.moveTo(430,50);
+			ctx.bezierCurveTo(500,50, 600,90,440,150);
+			ctx.lineTo(540,230);
+			ctx.stroke();
+			ctx.beginPath();
+			ctx.moveTo(430,230);
+			ctx.lineTo(430,38)
+			ctx.stroke();	
+
+			//LETRA I
+			ctx.beginPath();
+			ctx.moveTo(570,50);
+			ctx.lineTo(570,230)
+			ctx.stroke();
+
+			//LETRA C
+			ctx.beginPath();
+			ctx.moveTo(700,50);
+			ctx.quadraticCurveTo(500,170,700,230);
+			ctx.stroke();
+
+			//LETRA I
+			ctx.beginPath();
+			ctx.moveTo(750,50);
+			ctx.lineTo(750,230)
+			ctx.stroke();
+			
+			//LETRA O
+			ctx.beginPath();
+			ctx.arc(870,150,80, 0, 2*Math.PI,true);
+			ctx.stroke();
+			
+
+			//LETRA G
+			ctx.beginPath();
+			ctx.moveTo(120,270);
+			ctx.quadraticCurveTo(-60,360,90,440);
+			ctx.lineTo(140,360)
+			ctx.lineTo(30,360)
+			ctx.stroke();
+
+			//LETRA O
+			ctx.beginPath();
+			ctx.arc(250,360,75, 0, 2*Math.PI,true);
+			ctx.stroke();
+		
+			
+			//LETRA M
+			ctx.moveTo(350,450);
+			ctx.lineTo(360,280);
+			ctx.lineTo(400,340);
+			ctx.lineTo(440,280);
+			ctx.lineTo(460,450);
+			ctx.stroke();
+
+			//LETRA E
+			ctx.beginPath();
+			ctx.moveTo(580,260);
+			ctx.quadraticCurveTo(400,350,580,440);
+			ctx.stroke();
+			ctx.moveTo(500,350);
+			ctx.lineTo(550,350)
+			ctx.stroke();
+
+
+			//LETRA Z
+			ctx.beginPath();
+			ctx.moveTo(600,260);
+			ctx.bezierCurveTo(900,240,390,440,710,440);
+			ctx.stroke();
+			ctx.moveTo(600,350);
+			ctx.lineTo(690,350)
+			ctx.stroke();
+			
+			
+
+
+
+
+
+		}
+			
+
+		
+		
+	
+	}
+	
+		
+	}
+
+
+	
+</script>
+</head>
+
+<body>
+	<marquee behavior="alternate" direction="left"><font size="27" color="#010005" face="Arial"><b> DISEÑO Y DESARROLLO DE VIDEOJUEGOS</b> </font>
+	</marquee>
+<canvas id="miCanvas" width="1000px" height="500px">
+	
+Tu navegador no soporta CANVAS
+</canvas>
+<h3><ol><a href="coronattack.html" class="boton" target="_blank">Ir al Juego</a></ol></h3>
+
+</body>
+</html>
